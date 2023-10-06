@@ -1,7 +1,8 @@
-import VideoThumb from '@/public/images/hero-image.png'
+import VideoThumb from '@/public/images/list.png'
 import ModalVideo from '@/components/modal-video'
 
 export default function Hero() {
+  
   return (
     <section className="relative">
 
@@ -29,15 +30,20 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Make your website <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">wonderful</span></h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Free List of <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"> <br />250+ Directories</span></h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+              <p className="text-2xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">we know as a busy founder you don't have time thats why we provide a service of <a className="underline decoration-sky-500 hover:decoration-sky-900 font-bold" href="https://www.reachactory.online">sharing your product with 100+ cherry picked directories</a></p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
+                  <input type="email" placeholder="Enter your email here" className="text hover:bg-teal-100 w-full" required />
+                  <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos="zoom-y-out" data-aos-delay="150">click submit to start downloading</p>
+                  {/* <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2" href="#0"> ↓ </a>            */}
                 </div>
                 <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
+                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" href="#0">Submit</a>                
+                </div>
+                <div>
+                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> ↓ </a>           
                 </div>
               </div>
             </div>
@@ -49,7 +55,7 @@ export default function Hero() {
             thumbWidth={768}
             thumbHeight={432}
             thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
+            video="/videos/demo.mp4"
             videoWidth={1920}
             videoHeight={1080} />
 
