@@ -1,7 +1,21 @@
+"use client"
 import VideoThumb from '@/public/images/list.png'
 import ModalVideo from '@/components/modal-video'
+import React, { useRef } from "react";
+
 
 export default function Hero() {
+
+  const emailInputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleClick = () => {
+    const emailValue = emailInputRef?.current?.value; // Use optional chaining
+    if (emailValue) {
+      console.log("Here's my input:", emailValue);
+    } else {
+      console.log("Input value is null or undefined.");
+    }
+  };
   
   return (
     <section className="relative">
@@ -35,12 +49,12 @@ export default function Hero() {
               <p className="text-2xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">we know as a busy founder you don't have time thats why we provide a service of <a className="underline decoration-sky-500 hover:decoration-sky-900 font-bold" href="https://www.reachactory.online">sharing your product with 100+ cherry picked directories</a></p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <input type="email" placeholder="Enter your email here" className="text hover:bg-teal-100 w-full" required />
+                  <input type="email" placeholder="Enter your email here" className="text hover:bg-teal-100 w-full" ref={emailInputRef} required />
                   <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos="zoom-y-out" data-aos-delay="150">click submit to start downloading</p>
                   {/* <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2" href="#0"> ↓ </a>            */}
                 </div>
                 <div>
-                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" href="#0">Submit</a>                
+                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick} href="#0">Submit</a>                
                 </div>
                 <div>
                   <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> ↓ </a>           
