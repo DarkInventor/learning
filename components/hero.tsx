@@ -16,6 +16,8 @@ export default function Hero() {
       link.href = pdfUrl;
       link.download = "250+Directories.pdf"; // Specify the desired download file name
       link.click();
+      
+      // window.location.href = "https://www.reachactory.online";
     } else {
       console.log("Input value is null or undefined.");
     }
@@ -64,7 +66,7 @@ export default function Hero() {
                 <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos-delay="150">click submit to start downloading </p>
                 {/* <button className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick}>Submit</button>                 */}
                 </div>
-                </form>
+              </form>
                 <div>
                   <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> video ↓ </a>           
                 </div>
