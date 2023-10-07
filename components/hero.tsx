@@ -9,16 +9,33 @@ export default function Hero() {
 
   const handleClick = () => {
     const emailValue = emailInputRef?.current?.value; // Use optional chaining
-    if (emailValue) {
-      console.log("Here's my input:", emailValue);
-      const pdfUrl = "/pdf/directories.pdf"; // Specify the path to your PDF file in the public directory
+    // if (emailValue) {
+    //   console.log("Here's my input:", emailValue);
+    //   const pdfUrl = "/pdf/directories.pdf"; // Specify the path to your PDF file in the public directory
+    //   const link = document.createElement("a");
+    //   link.href = pdfUrl;
+    //   link.download = "250+Directories.pdf"; // Specify the desired download file name
+    //   link.click();
+
+    // } 
+    const pdfUrl = "/pdf/directories.pdf?action1=download&action2=open";
+    const actions = pdfUrl.split('?')[1]?.split('&');
+    const downloadAction = actions?.includes('action1=download');
+    const openAction = actions?.includes('action2=open');
+  
+    if (downloadAction) {
+      // Download the PDF
       const link = document.createElement("a");
-      link.href = pdfUrl;
-      link.download = "250+Directories.pdf"; // Specify the desired download file name
+      link.href = "/pdf/directories.pdf";
+      link.download = "250+Directories.pdf";
       link.click();
-      
-      // window.location.href = "https://www.reachactory.online";
-    } else {
+    }
+  
+    if (openAction) {
+      // Open a new tab with the specified website
+      window.open("https://www.reachactory.online", "_blank");
+    }
+    else {
       console.log("Input value is null or undefined.");
     }
   };
