@@ -33,9 +33,7 @@ export default function Hero() {
   
     if (openAction) {
       // Open a new tab with the specified website
-      setTimeout(function() {
       window.open("https://www.reachactory.online", "_blank");
-      }, 3000);
     }
     else {
       console.log("Input value is null or undefined.");
