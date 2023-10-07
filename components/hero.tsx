@@ -11,15 +11,14 @@ export default function Hero() {
     const emailValue = emailInputRef?.current?.value; // Use optional chaining
     if (emailValue) {
       console.log("Here's my input:", emailValue);
+      const pdfUrl = "/pdf/directories.pdf"; // Specify the path to your PDF file in the public directory
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = "250+Directories.pdf"; // Specify the desired download file name
+      link.click();
     } else {
       console.log("Input value is null or undefined.");
     }
-
-    const pdfUrl = "/pdf/directories.pdf"; // Specify the path to your PDF file in the public directory
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "250+Directories.pdf"; // Specify the desired download file name
-    link.click();
   };
   
   return (
