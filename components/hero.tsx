@@ -85,14 +85,15 @@ export default function Hero() {
                 </div>
               </form>
                 <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> video ↓ </a>           
+                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#modalvideo"> video ↓ </a>           
                 </div>
               </div>
             </div>
           </div>
 
           {/* Hero image */}
-          <ModalVideo
+          <div id="modalvideo">
+          <ModalVideo     
             thumb={VideoThumb}
             thumbWidth={768}
             thumbHeight={432}
@@ -100,6 +101,8 @@ export default function Hero() {
             video="/videos/demo.mp4"
             videoWidth={1920}
             videoHeight={1080} />
+          </div>
+          
 
         </div>
 
