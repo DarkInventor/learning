@@ -20,7 +20,6 @@ export default function Hero() {
     link.href = pdfUrl;
     link.download = "250+Directories.pdf"; // Specify the desired download file name
     link.click();
-
   };
   
   return (
@@ -54,16 +53,21 @@ export default function Hero() {
             <div className="max-w-3xl mx-auto">
               <p className="text-2xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">we know as a busy founder you don't have time thats why we provide a service of <a className="underline decoration-sky-500 hover:decoration-sky-900 font-bold" href="https://www.reachactory.online">sharing your product with 100+ cherry picked directories</a></p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
-                <div>
-                  <input type="email" placeholder="Enter your email here" className="text hover:bg-teal-100 w-full" ref={emailInputRef} required />
-                  <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos="zoom-y-out" data-aos-delay="150">click submit to start downloading</p>
+              <form action="https://submit-form.com/Xk2gIRvb">
+                <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0">          
+                  <input type="email" placeholder="Enter your email here" className="text hover:bg-teal-100 w-full" name="email" ref={emailInputRef} required />
+                  <button className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick}>Submit</button>          
+                  {/* <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos-delay="150">click submit to start downloading </p> */}
+                 
                   {/* <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2" href="#0"> ↓ </a>            */}
                 </div>
                 <div>
-                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick} href="#0" >Submit</a>                
+                <p className="text-md text-gray-600 mb-8 w-full mt-2" data-aos-delay="150">click submit to start downloading </p>
+                {/* <button className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick}>Submit</button>                 */}
                 </div>
+                </form>
                 <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> ↓ </a>           
+                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> video ↓ </a>           
                 </div>
               </div>
             </div>
