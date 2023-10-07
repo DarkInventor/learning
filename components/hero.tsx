@@ -3,7 +3,6 @@ import VideoThumb from '@/public/images/list.png'
 import ModalVideo from '@/components/modal-video'
 import React, { useRef } from "react";
 
-
 export default function Hero() {
 
   const emailInputRef = useRef<HTMLInputElement | null>(null);
@@ -15,6 +14,13 @@ export default function Hero() {
     } else {
       console.log("Input value is null or undefined.");
     }
+
+    const pdfUrl = "/pdf/directories.pdf"; // Specify the path to your PDF file in the public directory
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "250+Directories.pdf"; // Specify the desired download file name
+    link.click();
+
   };
   
   return (
@@ -54,7 +60,7 @@ export default function Hero() {
                   {/* <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2" href="#0"> ↓ </a>            */}
                 </div>
                 <div>
-                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick} href="#0">Submit</a>                
+                <a className="btn text-white bg-gray-900 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0 sm:ml-3" onClick={handleClick} href="#0" >Submit</a>                
                 </div>
                 <div>
                   <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:mlx-2 lg:ml-2 lg:mt-24" href="#0"> ↓ </a>           
